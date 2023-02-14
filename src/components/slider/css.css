@@ -1,0 +1,40 @@
+.swiper-pagination {
+    display: none;
+}
+
+.mySwiper {
+    margin-top: 16px;
+}
+
+@media screen and (max-width: 768px) {
+    .mySwiper2 {
+        height: 238px;
+        width: 137px;
+    }
+
+    .swiper-pagination {
+        display: block;
+    }
+
+    .swiper-pagination-bullet {
+        height: 7px;
+        width: 7px;
+    }
+
+    .swiper-pagination-bullet-active {
+        background: black;
+        height: 9px;
+        width: 9px;
+    }
+
+    .mySwiper {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .mySwiper2 {
+        height: 300px;
+        width: 188px;
+    }
+}
