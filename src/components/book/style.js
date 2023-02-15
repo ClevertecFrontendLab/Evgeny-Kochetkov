@@ -171,36 +171,36 @@ export const SInfoContainerGrid = styled.dl`
     grid-row-gap: 16px;
     grid-template-areas:
     'h3 h3 . . .'
-    'publishingHouse publishingHouseDD . genre genreDD'
-    'year yearDD . wt wtDD'
+    'publish publishDD . categories categoriesDD'
+    'year yearDD . weight weightDD'
     'pages pagesDD . isbn isbnDD'
-    'binding bindingDD . manufacturer manufacturerDD'
-    'format formatDD . manufacturer manufacturerDD';
+    'cover coverDD . producer producerDD'
+    'format formatDD . producer producerDD';
     @media ${device.tablet} {
         grid-template: 40px 18px 18px 18px 18px 80px / 151px 153px 30px 151px 153px;
         grid-row-gap: 16px;
         grid-template-areas:
         'h3 h3 . . .'
-        'publishingHouse publishingHouseDD . genre genreDD'
-        'year yearDD . wt wtDD'
+        'publish publishDD . categories categoriesDD'
+        'year yearDD . weight weightDD'
         'pages pagesDD . isbn isbnDD'
-        'binding bindingDD . manufacturer manufacturerDD'
-        'format formatDD . manufacturer manufacturerDD';
+        'cover coverDD . producer producerDD'
+        'format formatDD . producer producerDD';
     }
     @media ${device.mobileL} {
         grid-template: 40px repeat(8, 18px) 80px / 144px 144px;
         grid-row-gap: 16px;
         grid-template-areas:
         'h3 h3'
-        'publishingHouse publishingHouseDD'
+        'publish publishDD'
         'year yearDD'
         'pages pagesDD'
-        'binding bindingDD'
+        'cover coverDD'
         'format formatDD'
-        'genre genreDD'
-        'wt wtDD'
+        'categories categoriesDD'
+        'weight weightDD'
         'isbn isbnDD'
-        'manufacturer manufacturerDD'
+        'producer producerDD'
     }
 `;
 

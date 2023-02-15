@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import { useSelector } from 'react-redux';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 
@@ -16,36 +15,35 @@ import './css.css'
 import noBookImgBig from '../../assets/img/no-image-big.png';
 import noBookImg from '../../assets/img/no-image.png';
 
-export const Slider = () => {
-
-    const bookArr = useSelector(state => state.bookArr);
-
-    const hrefId = document.location.href.split('/').pop();
-    const [bookItem] = bookArr.filter(({id}) => id === hrefId);
-
+export const Slider = ({images}) => {
 
     const [thumbsSwiper, setThumbsSwiper] = useState(null);
 
-    function renderSlides(book) {
-        return book.imgArr.map((item, i) => (
-                <SwiperSlide data-test-id='slide-mini' key={`slide ${i + 1}`}>
-                    <img src={item} alt={`slide ${i + 1}`}/>
-                </SwiperSlide>
-            )   
-        )
-    }
-
-    const slides = renderSlides(bookItem);
-
-    function renderSlider({imgArr, name}) {
-
+    function renderSlider(images) {
         const noImg =  window.innerWidth > 425 ? noBookImgBig : noBookImg;
+
+        if(!images) {
+            return (
+                <SSliderWrapper>
+                    <SImg src={noImg} alt='нет фото'/> 
+                </SSliderWrapper>
+            )
+        }
+
+        function renderSlides(images) {
+            if(!images) return null
+    
+            return images.map((item, i) => (
+                    <SwiperSlide data-test-id='slide-mini' key={`slide ${i + 1}`}>
+                        <img src={`https://strapi.cleverland.by${item.url}`} alt={`slide ${i + 1}`}/>
+                    </SwiperSlide>
+                )   
+            )
+        }
+    
+        const slides = renderSlides(images);
         
-        const noImgOrSlider = slides.length === 0 ?
-            <SSliderWrapper>
-                <SImg src={imgArr.length === 0 ? noImg : imgArr[0]} alt={`Книга: ${name}`}/> 
-            </SSliderWrapper>
-            :
+        return (
             <SSliderWrapper>
                 <Swiper
                     data-test-id='slide-big'
@@ -74,11 +72,10 @@ export const Slider = () => {
                     {slides}
                 </Swiper>
             </SSliderWrapper>
-    
-        return noImgOrSlider;
+        )
     };
 
-    const slider = renderSlider(bookItem);
+    const slider = renderSlider(images);
 
     return slider;
 }

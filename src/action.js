@@ -2,6 +2,8 @@ export const list = () => ({type: 'LIST'});
 
 export const tile = () => ({type: 'TILE'});
 
+export const closeErrorMessage = () => ({type: 'CLOSE_ERROR_MESSAGE'});
+
 export const changeTileDisplay = () => ({type: 'CHANGE_TILE_DISPLAY_SHOWCASE_OF_BOOKS'});
 
 export const closeTileDisplay = () => ({type: 'CLOSE_TILE_DISPLAY_SHOWCASE_OF_BOOKS'});

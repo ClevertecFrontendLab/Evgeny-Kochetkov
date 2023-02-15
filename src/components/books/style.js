@@ -146,7 +146,7 @@ export const SBookItemContent = styled.div`
 export const SImg = styled.img`
     grid-area: img;
     max-height: 100%;
-    margin: 0 auto;
+    margin: auto auto;
 `;
 
 export const SBookName = styled.span`

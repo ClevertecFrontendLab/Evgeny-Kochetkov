@@ -13,7 +13,7 @@ const webkitBackground = css`
 export const STabs = styled.nav`
     display: ${({displayNone}) => displayNone ? 'none' : 'block'};
     margin-top: 32px;
-    width: 279px;
+    /* width: 279px; */
     z-index: 10;
     > * {
         width: 279px;

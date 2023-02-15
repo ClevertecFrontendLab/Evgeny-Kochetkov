@@ -5,16 +5,23 @@ import { theme, device } from '../../theme';
 const {shadow, colors: { dark }} = theme;
 
 export const SHeader = styled.header`
-    height: 94px;
-    margin-top: 32px;
+    width: 1110px;
+    height: 124px;
     display: grid;
     align-items: center;
     grid-template: 1fr / 1fr 3fr;
-    @media ${device.laptopM} {
+    @media ${device.tablet} {
         display: flex;
+        width: 640px;
     }
-    @media ${device.laptopL} {
-        margin-top: 24px;
+    @media ${device.mobileL} {
+        width: 404px;
+    }
+    @media ${device.mobileM} {
+        width: 312px;
+    }
+    @media ${device.mobileS} {
+        width: 288px;
     }
 `;
 

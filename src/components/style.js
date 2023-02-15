@@ -5,8 +5,8 @@ import { device } from '../theme';
 export const SMainContainerGred = styled.section`
     display: ${({displayFlex}) => displayFlex ? 'flex' : 'grid'};
     justify-content: center;
+    gap: 10px;
     grid-template: 1fr/ 1fr 3fr;
-    gap: 6px;
     @media ${device.laptopM} {
         display: flex;
     }

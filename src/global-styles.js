@@ -6,7 +6,6 @@ const {font, colors: {white, dark}} = theme;
 export const GlobalStyle = createGlobalStyle`
 	body {
 		display: flex;
-		height: 100%;
 		justify-content: center;
 		scroll-behavior: smooth;
 		text-rendering: optimizeSpeed;

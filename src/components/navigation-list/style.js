@@ -16,7 +16,6 @@ export const SNavigationList = styled.form`
     'search text . tile list';
     gap: 16px;
     margin-top: 32px;
-    
     > * {
         height: 38px;
         box-shadow: ${shadow};
@@ -43,7 +42,7 @@ export const SNavigationList = styled.form`
         'search text . tile list';
     }
     @media ${device.mobileS} {
-        grid-template: 1fr / 38px 38px 70px 38px 38px;
+        grid-template: 1fr / 38px 38px 72px 38px 38px;
         grid-template-areas:
         'search text . tile list';
     }

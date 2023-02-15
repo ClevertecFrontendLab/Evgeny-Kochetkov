@@ -1,8 +1,13 @@
 import { initialState } from './initial-state';
 
-/* Соблюдай принцип иммутабельности! */
 export const reduser = (state = initialState, action) => {
 	switch (action.type) {
+		case 'CLOSE_ERROR_MESSAGE':
+			return {
+				...state,
+				activeErrorMessage: false,
+			}	
+
 		case 'SET_THUMBS_SWIPER':
 			return {
 				...state,

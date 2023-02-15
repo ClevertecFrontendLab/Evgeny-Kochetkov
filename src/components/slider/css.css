@@ -2,14 +2,31 @@
     display: none;
 }
 
+.mySwiper2 {
+    height: 594px;
+}
+
+.mySwiper2 img {
+    height: 594px;
+}
+
 .mySwiper {
     margin-top: 16px;
+    max-height: 86px;
+}
+
+.mySwiper img {
+    height: 86px;
 }
 
 @media screen and (max-width: 768px) {
     .mySwiper2 {
         height: 238px;
         width: 137px;
+    }
+
+    .mySwiper2 img {
+        height: 198px;
     }
 
     .swiper-pagination {

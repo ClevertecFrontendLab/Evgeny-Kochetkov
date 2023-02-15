@@ -9,7 +9,6 @@ export const SSliderWrapper = styled.div`
     }
     @media ${device.mobileL} {
         width: 100%;
-        /* margin-left: 50px; */
     }
 `;
 
