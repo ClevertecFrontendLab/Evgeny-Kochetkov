@@ -5,6 +5,12 @@ export const useBooksService = () => {
 
     const apiBase = 'https://strapi.cleverland.by';
 
+    if(loading) {
+        document.body.style.overflow = 'hidden';
+    } else {
+        document.body.style.overflow = '';
+    }
+
     const getAllBooks = async () => {
         const res = await request(`${apiBase}/api/books`);
         return res;
@@ -15,7 +21,13 @@ export const useBooksService = () => {
         return res;
     }
 
-    return {loading, error, clearError, getAllBooks, getBook}
+    const getCategories = async () => {
+        const res = await request(`${apiBase}/api/categories`)
+        return res
+    }
+
+
+    return {loading, error, clearError, getAllBooks, getBook, getCategories}
 }
 
 /* fetch('https://strapi.cleverland.by/api/books/2').then(response => response.json()).then(json => console.log(json)) */

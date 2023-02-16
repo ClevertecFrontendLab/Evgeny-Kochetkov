@@ -11,7 +11,7 @@ export const SBookListNavigate = styled.nav`
     position: absolute;
     margin-top: 24px;
     left: 0;
-    width: 99vw;
+    width: 98vw;
     height: 92px;
     background: ${black5};
     @media ${device.tablet} {

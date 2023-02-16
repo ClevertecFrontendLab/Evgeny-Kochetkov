@@ -10,7 +10,6 @@ const rotate = keyframes`
 `;
 
 export const SSpinnerBg = styled.div`
-    display: block;
     position: fixed;
     top: 0;
     left: 0;
@@ -27,4 +26,6 @@ export const SSpinner = styled.svg`
     position: absolute;
     top: 50%;
     left: 50%;
+    width: 10vw;
+    height: 10vh;
 `;
